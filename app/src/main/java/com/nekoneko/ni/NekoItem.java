@@ -1,11 +1,20 @@
 package com.nekoneko.ni;
 
 public class NekoItem {
+    private String mName;
     private int mLocationX;
     private int mLocationY;
     private int mFeedQuantity;
     private int mWaterQuantity;
     private boolean isCatChecked;
+
+    public String getmName() {
+        return mName;
+    }
+
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
 
     public int getmLocationX() {
         return mLocationX;

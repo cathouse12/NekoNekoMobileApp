@@ -1,9 +1,10 @@
 package com.nekoneko.ni;
 
 import android.app.FragmentManager;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,14 +22,27 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final String TAG = "MainActivity";
 
+    private RecyclerView mNekoRecyclerView;
+    private RecyclerView.Adapter mNekoAdapter;
+    private RecyclerView.LayoutManager mNekoLayoutManger;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mNekoRecyclerView = findViewById(R.id.mNekoRecyclerView);
+
+        mNekoLayoutManger = new LinearLayoutManager(getApplicationContext());
+        mNekoRecyclerView.setLayoutManager(mNekoLayoutManger);
+
+        mNekoAdapter = new NekoAdapter();
+
+        mNekoRecyclerView.setAdapter(mNekoAdapter);
+
         //프래그먼트 세팅하기
         FragmentManager fragmentManager = getFragmentManager();
-        MapFragment mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.mapFragment);
+        MapFragment mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.mMapFragment);
 
         //mapFragment 준비 완료 시 발생할 콜백 함수 설정
         mapFragment.getMapAsync(this);
