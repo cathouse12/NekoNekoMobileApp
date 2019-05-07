@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "418827919959",
+    "firebase_url": "https://nekoneko-70dce.firebaseio.com",
+    "project_id": "nekoneko",
+    "storage_bucket": "nekoneko.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418827919959:android:b44e526e10916337",
+        "android_client_info": {
+          "package_name": "com.nekoneko.ni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418827919959-jgqrlrmoqmjajqj0fag8ifpvbpiq129b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nekoneko.ni",
+            "certificate_hash": "5b6a6d57da1f343ee4df8080f3e3df5604a8f6e1"
+          }
+        },
+        {
+          "client_id": "418827919959-uqhhbe655ftin9695k4vd47j69j0jfei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM_YD8EM7TXpkFOuEn5wXj0Ifwsy_ZEVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418827919959-uqhhbe655ftin9695k4vd47j69j0jfei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
