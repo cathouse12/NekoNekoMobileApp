@@ -27,8 +27,6 @@ public class NekoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_neko,parent,false);

@@ -48,6 +48,7 @@
         android:textSize="15dp"
         android:fontFamily="@font/nanum_barun_gothic"
         android:background="@drawable/button_add_shape"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:onClick="addButtonClick"/>
 
 </LinearLayout>
