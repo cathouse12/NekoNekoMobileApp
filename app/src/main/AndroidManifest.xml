@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nekoneko.ni">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".FragmentTwo"></activity>
+        <activity android:name=".FragmentOne" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAcdIK-GN9Gw4K724le0jrnLEdnr8to3r0"/>
+            android:value="AIzaSyAcdIK-GN9Gw4K724le0jrnLEdnr8to3r0" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,8 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
     </application>
 
 </manifest>
