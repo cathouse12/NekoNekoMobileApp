@@ -38,6 +38,7 @@
         android:scrollbars="vertical" />
 
     <Button
+        android:id="@+id/mAddNekoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -48,7 +49,6 @@
         android:textSize="15dp"
         android:fontFamily="@font/nanum_barun_gothic"
         android:background="@drawable/button_add_shape"
-        style="?android:attr/borderlessButtonStyle"
-        android:onClick="addButtonClick"/>
+        style="?android:attr/borderlessButtonStyle"/>
 
 </LinearLayout>
