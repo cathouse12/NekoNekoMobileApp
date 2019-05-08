@@ -68,21 +68,22 @@ public class MainActivity extends AppCompatActivity {
                 //위치 퍼미션 체크하기
                 if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                         && ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-                    Log.d(TAG,"MapActivity");
-
-                    //가장 최근의 위치정보 가져오기
-                    Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-                    //인텐트 준비하기
-                    Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-
-                    intent.putExtra("longitude", location.getLongitude());  //위도 가져오기
-                    intent.putExtra("latitude", location.getLatitude());    //경도 가져오기
-
-                    //MapActivity로 화면 전환하기
-                    startActivityForResult(intent,REQUEST_CODE_MAIN);
+                    return;
                 }
+
+                Log.d(TAG,"MapActivity");
+
+                //가장 최근의 위치정보 가져오기
+                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+                //인텐트 준비하기
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+
+                intent.putExtra("longitude", location.getLongitude());  //위도 가져오기
+                intent.putExtra("latitude", location.getLatitude());    //경도 가져오기
+
+                //MapActivity로 화면 전환하기
+                startActivityForResult(intent,REQUEST_CODE_MAIN);
             }
         });
     }
