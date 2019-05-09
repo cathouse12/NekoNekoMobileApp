@@ -2,7 +2,7 @@
 글로벌해커톤 1등상 작품 "네코"
 
 # 사진
-![neko.png](./)
+![neko](./neko.png)
 
 
 # Fan5 Global Hackathon 
