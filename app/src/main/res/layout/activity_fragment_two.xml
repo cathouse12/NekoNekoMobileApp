@@ -10,7 +10,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:orientation="vertical"
-        tools:context=".FragmentTwo">
+        tools:context=".StarFragment">
 
         <TextView
             android:layout_marginTop="20dp"

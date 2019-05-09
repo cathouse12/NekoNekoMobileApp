@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android= "http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <tabs>
-
         <tab
-            id="@+id/tab_home"
-            icon="@drawable/ic_home_black_24dp"
-            title="홈" />
-
-        <tab
-            id="@+id/tab_star"
             icon="@drawable/ic_star_black_24dp"
+            id="@+id/tab_star"
             title="즐겨찾기" />
-
+        <tab
+            icon="@drawable/locate_places"
+            id="@+id/tab_locate"
+            title="지도" />
     </tabs>
 
 </PreferenceScreen>

@@ -7,20 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentTwo extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
-    public FragmentTwo() {
+public class StarFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+    public StarFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View v = inflater.inflate(R.layout.activity_fragment_two, container, false);
-        return v;
-
-
+        return inflater.inflate(R.layout.activity_fragment_two, container, false);
     }
 
     @Override

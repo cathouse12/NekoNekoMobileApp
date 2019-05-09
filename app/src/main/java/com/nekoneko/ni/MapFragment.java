@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class FragmentOne extends Fragment
+public class MapFragment extends Fragment
         implements OnMapReadyCallback {
 
 
@@ -29,7 +29,7 @@ public class FragmentOne extends Fragment
     private Geocoder geocoder;
 
 
-    public FragmentOne() {
+    public MapFragment() {
 
     }
 
@@ -110,12 +110,12 @@ public class FragmentOne extends Fragment
         makerOptions
                 .position(seoul)
                 .title("서울혁신파크 상상청")
-                .snippet("먹이가 85% 남았습니다")
+                .snippet("사료량 - 98%, 고양이 있음!")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                .alpha(0.5f);
+                .alpha(0.8f);
         mMap.addMarker(makerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(17));
     }
 
 }

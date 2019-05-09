@@ -10,8 +10,8 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentOne fragmentone;
-    private FragmentTwo fragmenttwo;
+    private MapFragment mapFragment;
+    private StarFragment starFragment;
 
 
     @Override
@@ -19,39 +19,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragmentone = new FragmentOne();
-        fragmenttwo = new FragmentTwo();
+        mapFragment = new MapFragment();
+        starFragment = new StarFragment();
+
         initFragment();
 
-
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        BottomBar bottomBar = findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-                if(tabId == R.id.tab_home){
-                    transaction.replace(R.id.contentContainer, fragmentone).commit();
-                }
-
-                else if(tabId == R.id.tab_star) {
-                    transaction.replace(R.id.contentContainer, fragmenttwo).commit();
-
-                }
-
-                }
+                if (tabId == R.id.tab_star)
+                    transaction.replace(R.id.contentContainer, mapFragment).commit();
+                else if (tabId == R.id.tab_locate)
+                    transaction.replace(R.id.contentContainer, starFragment).commit();
+            }
 
         });
-}
+    }
 
     /*
      App 실행시 보여지는 Fragment 설정.
     */
-    public void initFragment(){
+    public void initFragment() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.add(R.id.contentContainer, fragmentone);
+        transaction.add(R.id.contentContainer, starFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
 }
