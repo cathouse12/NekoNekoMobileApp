@@ -1,161 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.v4.widget.SwipeRefreshLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/swipe_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent">
 
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        tools:context=".FragmentTwo">
 
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".FragmentTwo">
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/cardview_light_background"
-        card_view:cardCornerRadius="2dp"
-        card_view:contentPadding="10dp">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Neko"
+            android:textSize="40dp"
+            style="@style/NekoTextView"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="고양이 찾아주는 앱"
+            android:textSize="20dp"
+            style="@style/NekoTextView"/>
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/image" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="고양이 쉼터 1 "
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvEmailId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvName"
-                    android:layout_marginTop="10dp" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view2"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/cardview_light_background"
-        card_view:cardCornerRadius="2dp"
-        card_view:contentPadding="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/image" />
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardBackgroundColor="@color/cardview_light_background"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvName2"
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/image" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="고양이 쉼터 2"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvEmailId2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvName"
-                    android:layout_marginTop="10dp" />
+                    <TextView
+                        android:text="서울혁신파크 Neko"
+                        style="@style/NekoTextView"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="사료량 - 98%, 고양이 있음!"
+                        style="@style/NekoTextView"/>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view3"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/cardview_light_background"
-        card_view:cardCornerRadius="2dp"
-        card_view:contentPadding="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/image"  />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvName3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="고양이 쉼터 3 "
-                    android:layout_alignParentTop="true"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvEmailId3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvName"
-                    android:layout_marginTop="10dp" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-
-
-
-</LinearLayout>
-
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 </ScrollView>
-</android.support.v4.widget.SwipeRefreshLayout>

@@ -18,15 +18,6 @@ public class FragmentTwo extends Fragment implements SwipeRefreshLayout.OnRefres
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.activity_fragment_two, container, false);
-
-        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_layout);
-        mSwipeRefreshLayout.setOnRefreshListener(this);
-
-
-
-
-
-
         return v;
 
 
