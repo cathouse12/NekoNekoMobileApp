@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAcdIK-GN9Gw4K724le0jrnLEdnr8to3r0" />
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyAcdIK-GN9Gw4K724le0jrnLEdnr8to3r0"/>
 
         <meta-data
             android:name="com.google.android.gms.version"

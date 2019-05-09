@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         });
 }
 
-
     /*
      App 실행시 보여지는 Fragment 설정.
     */

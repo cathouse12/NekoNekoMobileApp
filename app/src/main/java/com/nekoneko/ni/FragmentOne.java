@@ -1,7 +1,8 @@
 package com.nekoneko.ni;
 
-import android.location.Location;
+import android.location.Geocoder;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,8 +19,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class FragmentOne extends Fragment
         implements OnMapReadyCallback {
 
+
     private MapView mapView = null;
-    private Location lastKnownLocation = null ;
+    private GoogleMap mMap;
+    private Geocoder geocoder;
 
 
     public FragmentOne() {
@@ -33,7 +36,7 @@ public class FragmentOne extends Fragment
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.activity_fragment_one, container, false);
         mapView = (MapView)layout.findViewById(R.id.map);
         mapView.getMapAsync(this);
@@ -97,17 +100,15 @@ public class FragmentOne extends Fragment
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng SEOUL = new LatLng(37.56, 126.97);
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("수도");
-        googleMap.addMarker(markerOptions);
-
+        mMap = googleMap;
+        LatLng seoul = new LatLng(37.52487, 126.92723);
+        MarkerOptions makerOptions = new MarkerOptions();
+        makerOptions
+                .position(seoul)
+                .title("원하는 위치(위도, 경도)에 마커를 표시했습니다.");
+        mMap.addMarker(makerOptions);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
-
-
-
 }
 
