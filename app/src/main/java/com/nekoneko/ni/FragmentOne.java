@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -107,8 +110,10 @@ public class FragmentOne extends Fragment
                 .position(seoul)
                 .title("원하는 위치(위도, 경도)에 마커를 표시했습니다.");
         mMap.addMarker(makerOptions);
+        makerOptions.title("여의도!!");
         mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
+
 }
 
