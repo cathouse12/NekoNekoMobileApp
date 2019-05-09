@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,7 +35,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@drawable/image" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,6 +48,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="고양이 쉼터 1 "
                     android:textStyle="bold" />
 
                 <TextView
@@ -71,7 +80,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@drawable/image" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -84,6 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="고양이 쉼터 2"
                     android:textStyle="bold" />
 
                 <TextView
@@ -114,7 +125,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@mipmap/ic_launcher" />
+                android:background="@drawable/image"  />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,6 +137,8 @@
                     android:id="@+id/tvName3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="고양이 쉼터 3 "
                     android:layout_alignParentTop="true"
                     android:textStyle="bold" />
 
@@ -145,3 +158,4 @@
 </LinearLayout>
 
 </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

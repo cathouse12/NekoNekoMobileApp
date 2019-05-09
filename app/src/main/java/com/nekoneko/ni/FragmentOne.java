@@ -104,13 +104,14 @@ public class FragmentOne extends Fragment
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng seoul = new LatLng(37.52487, 126.92723);
+        LatLng seoul = new LatLng(37.6085029, 126.934708);
         MarkerOptions makerOptions = new MarkerOptions();
         makerOptions
                 .position(seoul)
-                .title("원하는 위치(위도, 경도)에 마커를 표시했습니다.");
+                .title("서울혁신파크 상상청");
         mMap.addMarker(makerOptions);
-        makerOptions.title("여의도!!");
+        makerOptions.title("서울혁신파크");
+        makerOptions.snippet("먹이가 85% 남았습니다");
         mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
