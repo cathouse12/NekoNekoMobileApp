@@ -16,6 +16,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -108,10 +109,11 @@ public class FragmentOne extends Fragment
         MarkerOptions makerOptions = new MarkerOptions();
         makerOptions
                 .position(seoul)
-                .title("서울혁신파크 상상청");
+                .title("서울혁신파크 상상청")
+                .snippet("먹이가 85% 남았습니다")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
+                .alpha(0.5f);
         mMap.addMarker(makerOptions);
-        makerOptions.title("서울혁신파크");
-        makerOptions.snippet("먹이가 85% 남았습니다");
         mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
     }
